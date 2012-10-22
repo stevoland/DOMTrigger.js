@@ -1,0 +1,39 @@
+{
+	"name": "DOMTrigger.js",
+	"description": "Simulate HTMLEvent and MouseEvents cross-browser",
+	"version": "0.1.0",
+	"homepage": "https://github.com/stevoland/DOMTrigger.js",
+	"contributors": [
+		{
+			"name": "kangax (Juriy Zaytsev)",
+			"url": "http://perfectionkills.com"
+		}
+	],
+	"maintainers": [
+		{
+			"name": "stevo (Stephen Collings)",
+			"email": "stevoland@gmail.com",
+			"url": "http://stevoland.com"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/stevoland/DOMTrigger.js.git"
+	},
+	"bugs": {
+		"url": "https://github.com/stevoland/DOMTrigger.js/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/stevoland/DOMTrigger.js/blob/master/LICENSE-MIT"
+		}
+	],
+	"devDependencies": {
+		"grunt": "~0.3.15"
+	},
+	"jam": {
+		"main": "dist/DOMTrigger.js"
+	},
+	"main": "dist/DOMTrigger.js"
+}
