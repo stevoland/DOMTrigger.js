@@ -4,13 +4,13 @@
 
 (function (root, factory, d) {
 	if (typeof exports === 'object') {
-		module.exports = factory(d);
+		module.exports = factory();
 	} else if (typeof define === 'function' && define.amd) {
-		define([d], factory);
+		define([], factory);
 	} else {
-		root.returnExports = factory(d);
+		root.returnExports = factory();
 	}
-}(this, function (d) {
+}(this, function () {
 
 	var eventMatchers = {
 			'HTMLEvents': /^(?:load|unload|abort|error|select|change|submit|reset|focus|blur|resize|scroll)$/,
@@ -48,8 +48,9 @@
 	 */
 	function DOMTrigger (element, eventName)
 	{
-		var options = extend(defaultOptions, arguments[2] || {});
-		var oEvent, eventType = null;
+		var options = extend(defaultOptions, arguments[2] || {}),
+			oEvent, eventType = null,
+			d = document;
 
 		for (var name in eventMatchers) {
 			if (eventMatchers[name].test(eventName)) { eventType = name; break; }
@@ -83,4 +84,4 @@
 	}
 
 	return DOMTrigger;
-}, document));
+}));
